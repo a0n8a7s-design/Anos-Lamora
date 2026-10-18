@@ -237,5 +237,16 @@ renderMemories();
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+  const SUPABASE_URL = "a45a1231-4284-47a2-b6d0-dcd96a67f5e5";
+  const SUPABASE_PUBLISHABLE_KEY = "a45a1231-4284-47a2-b6d0-dcd96a67f5e5";
+
+  const supabaseClient = window.supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_PUBLISHABLE_KEY
+  );
+</script>
+ 
 </body>
 </html>
