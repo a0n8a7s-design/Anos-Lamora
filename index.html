@@ -239,8 +239,8 @@ renderMemories();
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <script>
-  const SUPABASE_URL = "a45a1231-4284-47a2-b6d0-dcd96a67f5e5";
-  const SUPABASE_PUBLISHABLE_KEY = "a45a1231-4284-47a2-b6d0-dcd96a67f5e5";
+  const SUPABASE_URL = "https://vrnfpgbshhjxkkctfvid.supabase.co/rest/v1/";
+  const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_kWoiK9z7naHwAnVfFg0PKw_MwxeYSo7";
 
   const supabaseClient = window.supabase.createClient(
     SUPABASE_URL,
@@ -248,6 +248,13 @@ renderMemories();
   );
 window.supabaseConnectionReady = true;
 console.log("Supabase client initialized");
+supabaseClient.auth.getSession().then(({ data, error }) => {
+  if (error) {
+    console.error("Supabase test error:", error.message);
+  } else {
+    console.log("Supabase client is working");
+  }
+});
 </script>
  
 </body>
